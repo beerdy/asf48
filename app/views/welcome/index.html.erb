@@ -1,0 +1,7 @@
+	<div id="bxslider_top">
+		<ul class="bxslider_top">
+			<% @baners.each do |baner| %>
+			<li><a href="/akciis/<%= baner.description %>"><%= image_tag( baner.image.url, :title => baner.title ) %></a></li>
+			<% end %>
+		</ul>
+	</div>

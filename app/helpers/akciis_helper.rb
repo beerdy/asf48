@@ -1,0 +1,2 @@
+module AkciisHelper
+end

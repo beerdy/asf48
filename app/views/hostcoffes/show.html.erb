@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @hostcoffe.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hostcoffe.description %>
+</p>
+
+<%= link_to 'Edit', edit_hostcoffe_path(@hostcoffe) %> |
+<%= link_to 'Back', hostcoffes_path %>

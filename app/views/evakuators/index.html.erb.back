@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Evakuators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @evakuators.each do |evakuator| %>
+      <tr>
+        <td><%= evakuator.title %></td>
+        <td><%= evakuator.description %></td>
+        <td><%= link_to 'Show', evakuator %></td>
+        <td><%= link_to 'Edit', edit_evakuator_path(evakuator) %></td>
+        <td><%= link_to 'Destroy', evakuator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Evakuator', new_evakuator_path %>

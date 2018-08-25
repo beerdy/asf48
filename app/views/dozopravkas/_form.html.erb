@@ -1,0 +1,25 @@
+<%= form_for(@dozopravka) do |f| %>
+  <% if @dozopravka.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dozopravka.errors.count, "error") %> prohibited this dozopravka from being saved:</h2>
+
+      <ul>
+      <% @dozopravka.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

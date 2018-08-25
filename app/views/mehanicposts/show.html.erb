@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @mehanicpost.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @mehanicpost.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @mehanicpost.image_url %>
+</p>
+
+<%= link_to 'Edit', edit_mehanicpost_path(@mehanicpost) %> |
+<%= link_to 'Back', mehanicposts_path %>

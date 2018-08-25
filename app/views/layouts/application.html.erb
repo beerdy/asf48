@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Автотехцентр СТАРТ - Воронежское шоссе, напротив магазина Ашан</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/ico/favicon-16x16.png">
+  <link rel="manifest" href="/assets/ico/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/ico/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body class='<%= controller.controller_name %>'>
+<div style="min-width:1280px;width:auto;">
+<div class="layer1"></div>
+<div class="layer2">
+	<div class="phone">для информации свяжитесь с нами по телефону</div>
+	<div class="social">
+		<div><a href="https://facebook.com/startlp"><span></span></a></div>
+		<div><a href="https://vk.com/startlip"><span></span></a></div>
+		<div><a href="https://twitter.ru"><span></span></a></div>
+		<div><a href="https://livejournal.com"><span></span></a></div>
+		<div><a href="https://ok.ru"><span></span></a></div>
+	</div>
+</div>
+<div class="layer_logo">
+	<div id="left-logo"></div>
+	<div id="start-logo">
+		<a href="/"><div id="background-logo"></div></a>
+	</div>
+	<div id="right-logo"></div>
+	<div id="text-logo">
+		<div id="send-message"><span><strong><a href="#openModal">> ПЕРЕЗВОНИТЕ МНЕ</a></strong></span></div>
+		<div id="openModal" class="modalDialog">
+			<div>
+				<a href="#close" title="Закрыть" class="close"><strong>X</strong></a><br>
+				<%= form_for(@user) do |f| %>
+					<% if @user.errors.any? %>
+					<div id="error_explanation">
+						<h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+						<ul>
+						<% @user.errors.full_messages.each do |message| %>
+							<li><%= message %></li>
+						<% end %>
+						</ul>
+					</div>
+					<% end %>
+
+					<div class="field">
+						<label for="user_name">Ваше имя:</label><br>
+						<%= f.text_field :name %>
+					</div>
+					<div class="field">
+						<label for="user_email">Ваш номер телефона:</label><br>
+						<%= f.text_field :email %>
+					</div>
+					<div class="actions">
+						<%= f.submit 'OK!' %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+		<h1>АВТОТЕХЦЕНТР</h1>
+		<h3>ЛИПЕЦК, ВОРОНЕЖСКОЕ ШОССЕ - напротив магазина Ашан</h3>
+		<div id="flag-logo"><%= image_tag('flag-min.png') %></div>
+		<div id="phone-logo">
+			<h1>8(4742)52-22-62</h1>
+			<div style="background-color: green; height: 30px; border-radius: 20px; text-align: center; padding: 5px 0 0 0; margin: -7px 0 0 0"><a href="http://csct.startlp.com" style='color:white'><span style="text-transform: uppercase;">Обслуживание SsangYong</span></a></div>
+			<div style="background-color: red; height: 30px; border-radius: 20px; margin:2px 0 0 0; text-align: center;padding: 5px 0 0 0"><a href="http://wm.startlp.com" style='color:white'><span>МОЙКА АВТОМОБИЛЕЙ</span></a></div>
+		</div>
+	</div>
+</div>
+<div class="layer3">
+	<div class="menutop">
+			<div class="sm_button"><a href="#/catalog"><span><span class='sm_span'>КАТАЛОГ</span></span></a>
+				<div class="sm_submenu">
+					<div>
+						<p>ВЫБЕРИТЕ ГРУППУ</p>
+						<% Category.all.each do |category| %>
+							<%= link_to category do %>
+								<span><strong>»</strong> <%= category.title %></span>
+							<% end %>	
+						<% end %>
+					</div>
+				</div>
+			</div>
+			<div class="sm_button"><a href="#/whatwedo"><span><span class='sm_span'>ЧТО ДЕЛАЕМ?</span></span></a>
+				<div class="sm_submenu">
+					<div>
+						<p>СИЛОВЫЕ АГРЕГАТЫ</p>
+						<a href="/kapitalremonts"><span><strong>»</strong>  Ремонт двигателя </span></a>
+						<a href="/obsluzhivanies"><span><strong>»</strong> Техническое обслуживание</span></a>
+						<a href="/zamenamaslos"><span><strong>»</strong> Замена масел и фильтров</span></a>
+					</div>
+					<div>
+						<p>НАИБОЛЕЕ ВОСТРЕБОВАННО</p>
+						<a href="/monitorings"><span><strong>»</strong> Электрооборудование/span></a>
+						<a href="/kachestvomoykas"><span><strong>»</strong> Качественная автомойка</span></a>
+						<a href="/shinniyservices"><span><strong>»</strong> Шинный сервис</span></a>
+					</div>
+					<div>
+						<p>ПРОЧИЕ УСЛУГИ</p>
+						<a href="/dozopravkas"><span><strong>»</strong> Заправка кондиционеров</span></a>
+						<a href="/luboyrodremonta"><span><strong>»</strong> Развал - схождение</span></a>
+						<a href="/evakuators"><span><strong>»</strong> Кузовной ремонт</span></a>
+					</div>
+				</div>
+			</div>
+
+<!--			
+			<div class="sm_button"><a href="#/wedonotdo"><span><span class='sm_span'>ЧТО НЕ ДЕЛАЕМ?</span></span></a>
+				<div class="sm_submenu">
+					<div>
+						<p>СОБЛЮДАЕМ ЧИСТОТУ</p>
+						<a href="/hostmaslos"><span><strong>»</strong> Пятна? Не про нас!</span></a>
+						<a href="/hostmoykas"><span><strong>»</strong> Под сиденье достаем</span></a>
+					</div>
+					<div>
+						<p>РЕМОНТ</p>
+						<a href="/hostpodzamenus"><span><strong>»</strong> Под замену 100%</span></a>
+						<a href="/hostlishnees"><span><strong>»</strong> Не навязываем лишнего</span></a>
+					</div>
+					<div>
+						<p>ЗАБОТИМСЯ О ВАС</p>
+						<a href="/hostcoffes"><span><strong>»</strong> Не угостили кофе?</span></a>
+						<a href="/hostvremies"><span><strong>»</strong> Экономим ваше время</span></a>
+						<a href="/hostgaranties"><span><strong>»</strong> Гарантия есть гарантия</span></a>
+					</div>
+				</div>
+			</div>
+-->
+			<div class="sm_button"><a href="#/wedonotdo"><span><span class='sm_span'>НАШИ АКЦИИ!</span></span></a>
+				<div class="sm_submenu">
+					<div>
+						<p>АКЦИИ АВТОСЕРВИСА</p>
+    					<% Akcii.all.each do |akciya| %>
+    						<a href="/akciis/<%= akciya.id %>"><span><strong>»</strong> <%= akciya.title %></span></a>
+    					<% end %>
+					</div>
+				</div>
+			</div>
+			<div class="sm_button"><a href="#/info"><span><span class='sm_span'>ИНФОРМАЦИЯ</span></span></a>
+				<div class="sm_submenu">
+					<div>
+						<p>КОРОТКО О СЕРВИСЕ</p>
+						<a href="/certpodveskas#specs"><span><strong>»</strong> Специалисты</span></a>
+						<a href="#name2"><span><strong>»</strong> Сертификаты</span></a>
+						<a href="/hostcoffes"><span><strong>»</strong> Зона ожидания</span></a>
+						<a href="/photobooks"><span><strong>»</strong> Фотогалерея</span></a>
+					</div>
+					<div>
+						<p>КОНТАКТНЫЕ ДАННЫЕ</p>
+						<a href="/hostmaps"><span><strong>»</strong> Контакты</span></a>
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+
+<div id="layer3_1">
+</div>
+<div class="layer4">
+	<div class="content-block">
+		<div class="content-navigation-line"><a href="#types"><span>»</span>ВИДЫ ПРЕДОСТАВЛЯЕМОГО СЕРВИСА И УСЛУГ</a><span>»</span>УСЛУГИ ЭВАКУАТОРА</div>
+		<%= yield %>
+	</div>
+</div>
+<div class="layer6">
+	<div class='block1'><a name="types"><span class='scpec'>ВИДЫ ПРЕДОСТАВЛЯЕМОГО СЕРВИСА И УСЛУГ</span></a></div>
+	<div class='block2'>
+		<div class='servicebutton'>
+			<div>
+				<a href="/zamenamaslos" onclick="welcome.pressUslugi(this)"><div></div><div><span>ЗАМЕНА МАСЕЛ И ФИЛЬТРОВ<br>(технических жидкостей)</span></div></a>
+			</div>
+			<div>
+				<a href="/kapitalremonts" onclick="welcome.pressUslugi(this)"><div></div><div><span>РЕМОНТ ДВИГАТЕЛЯ<br>(систем охлаждения)</span></div></a>
+			</div>
+			<div>
+				<a href="/obsluzhivanies" onclick="welcome.pressUslugi(this)"><div></div><div><span>ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ<br>(регулярное ТО систем автомобиля)</span></div></a>
+			</div>
+		</div>
+		<div class='servicebutton'>
+			<div >
+				<a href="/kachestvomoykas" onclick="welcome.pressUslugi(this)"><div></div><div><span>КАЧЕСТВЕННАЯ АВТОМОЙКА</span></div></a>
+			</div>
+			<div>
+				<a href="/shinniyservices" onclick="welcome.pressUslugi(this)"><div></div><div><span>ШИННЫЙ СЕРВИС</span></div></a>
+			</div>
+			<div>
+				<a href="/monitorings" onclick="welcome.pressUslugi(this)"><div></div><div><span>ЭЛЕКТРООБОРУДОВАНИЕ<br>(диагностика и ремонт)</span></div></a>
+			</div>
+		</div>
+		<div class='servicebutton'>
+			<div >
+				<a href="/luboyrodremonta" onclick="welcome.pressUslugi(this)"><div></div><div><span>РАЗВАЛ - СХОЖДЕНИЕ<br>(ремонт ходовой части автомобиля)</span></div></a>
+			</div>
+			<div>
+				<a href="/dozopravkas" onclick="welcome.pressUslugi(this)"><div></div><div><span>ЗАПРАВКА КОНДИЦИОНЕРОВ (обслуживание, ремонт)</span></div></a>
+			</div>
+			<div>
+				<a href="/evakuators" onclick="welcome.pressUslugi(this)"><div></div><div><span>КУЗОВНОЙ РЕМОНТ</span></div></a>	
+			</div>
+		</div>
+	</div>
+</div>
+<div class="layer5" style="margin: 30px 0 30px;">
+	<div class="outer">
+	<% Newpost.all.reverse_each do |newpost| %>
+		<div>
+			<p>* <%= newpost[:title].upcase %></p>
+			<%= newpost[:description] %>
+		</div>
+	<% end %>
+	</div>
+</div>
+<div class="layer8">
+	<div class='block1'><a name="specs"><span class='scpec'>СЕРТИФИЦИРОВАННЫЕ ПРОФЕССИОНАЛЫ</span></a></div>
+	<div class='block2'>
+		<div class='specbutton'>
+			<div></div>
+			<a href="/certkapitals" onclick="welcome.pressUslugi(this)"><span>КАПИТАЛЬНЫЙ ДВИГАТЕЛЯ</span></a>
+		</div>
+		<div class='specbutton'>
+			<div></div>
+			<a href="/certpodveskas" onclick="welcome.pressUslugi(this)"><span>РЕМОНТ ПОДВЕСКИ</span></a>
+		</div>
+		<div class='specbutton'>
+			<div></div>
+			<a href="/certelectros" onclick="welcome.pressUslugi(this)"><span>РЕМОНТ ЭЛЕКТРИКИ</span></a>
+		</div>
+		<div class='specbutton'>
+			<div></div>
+			<a href="/certobsluzhis" onclick="welcome.pressUslugi(this)"><span>ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ</span></a>
+		</div>
+	</div>
+</div>
+<div class="layer7">
+	<div class="block1">
+		<h4><u><%= Notepost.find(1).title %></u></h4>
+		<%= Notepost.find(1).description.html_safe %>
+	</div>
+</div>
+<div class="layer9">
+    <div id='blabla'>
+	<div class='block1'>
+		<div><span>»</span>ПРОЦЕНТНОЕ СООТНОШЕНИЕ ОБРАЩЕНИЙ</div>
+		<div><span>»</span>КОММЕНТАРИЙ АВТОМЕХАННИКА</div>
+	</div>
+	<div class='block2'>
+		<div>
+			<span>ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ ТРАНСПОРТНОГО СРЕДСТВА</span>
+			<div style="width:50%"><span>50%</span></div>
+
+			<span>РЕМОНТ АКПП ТРАНСПОРТНОГО СРЕДСТВА</span>
+			<div style="width:10%"><span>10%</span></div>
+			
+			<span>РЕМОНТ ПОДВЕСКИ ТРАНСПОРТНОГО СРЕДСТВА</span>
+			<div style="width:30%"><span>30%</span></div>
+			
+			<span>ШИННЫЙ СЕРВИС</span>
+			<div style="width:10%"><span>10%</span></div>
+		</div>
+		<div>
+			<%= image_tag('avtomeh1.png') %>
+			<%= Mehanicpost.find(rand(Mehanicpost.count)+1).description %>
+		</div>
+	</div>
+    </div>
+</div>
+<div class="layer10">
+	<div class="block1"><span>НАШИ ПАРТНЕРЫ</span><div></div></div>
+	<div id="bxslider_bottom">
+		<div class="slider1">
+			<% 1.upto(8) do |i| %><div class="slide"><a href=""><%= image_tag("slider/bottom/brand#{i}.png") %></a></div><% end %>
+		</div>
+	</div>
+</div>
+<div class="layer11">
+	<div class="copyright">© 2015 СТАРТ Сервисный центр | <span><a href="">Лицензионное соглашение & разрешение обработки Cookie</a></span></div>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter34919540 = new Ya.Metrika({
+                    id:34919540,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/34919540" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Google.analistics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72901914-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- /Google.analistics-->
+
+	<div class="social">
+		<div><a href="https://facebook.com"><span></span></a></div>
+		<div><a href="https://vk.com"><span></span></a></div>
+		<div><a href="https://twitter.ru"><span></span></a></div>
+		<div><a href="https://livejournal.com"><span></span></a></div>
+		<div><a href="https://ok.ru"><span></span></a></div>
+	</div>
+</div>
+<div class="layer12"></div>
+<script type="text/javascript">
+	menuValues = new Object(12);
+	menuValues['zamenamaslos']    = 'ЗАМЕНА МАСЕЛ И ФИЛЬТРОВ';
+	menuValues['kapitalremonts']  = 'РЕМОНТ ДВИГАТЕЛЯ';
+	menuValues['obsluzhivanies']  = 'ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ';
+	menuValues['kachestvomoykas'] = 'КАЧЕСТВЕННАЯ АВТОМОЙКА';
+	menuValues['shinniyservices'] = 'ШИННЫЙ СЕРВИС';
+	menuValues['monitorings']     = 'ЭЛЕКТОРОБОРУДОВАНИЕ';
+	menuValues['luboyrodremonta'] = 'РАЗВАЛ СХОЖДЕНИЕ';
+	menuValues['dozopravkas']     = 'КОНДИЦИОНЕРЫ';
+	menuValues['evakuators']      = 'КУЗОВНОЙ РЕМОНТ';
+
+	menuValues['certkapitals']   = 'РЕМОНТ ДВИГАТЕЛЯ';
+	menuValues['certpodveskas']  = 'РЕМОНТ ПОДВЕСКИ';
+	menuValues['certelectros']   = 'РЕМОНТ ЭЛЕКТОРОБОРУДОВАНИЯ';
+	menuValues['certobsluzhis']  = 'ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ';
+	<% Article.all.each do |article| %>
+	$('#article<%=article.id%>').append("<div class='content-img-block-big'><img src='<%= article.image.url %>' alt='<%= article.title %>' /><%= article.text %></div>");	
+	<% end %> 
+</script>
+</div>
+</body>
+</html>

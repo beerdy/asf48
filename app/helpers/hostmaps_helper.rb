@@ -1,0 +1,2 @@
+module HostmapsHelper
+end

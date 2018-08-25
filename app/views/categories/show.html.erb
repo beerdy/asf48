@@ -1,0 +1,12 @@
+<br>
+<p><strong>КАТАЛОГ</strong> - <u><%= @category.title %></u></p>
+<div class="content-product-block-out">
+<% @category.products.each do |product| %>
+<div class="content-product-block"><%= image_tag product.image.url %>
+	<%= product.title %>
+	<p><%= product.description.html_safe %></p>
+	<a href='#openModal'>Заказать</a> звонок для уточнения подробностей.
+</div>
+<% end %>
+&nbsp
+</div>

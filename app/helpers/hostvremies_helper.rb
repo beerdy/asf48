@@ -1,0 +1,2 @@
+module HostvremiesHelper
+end

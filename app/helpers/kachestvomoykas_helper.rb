@@ -1,0 +1,2 @@
+module KachestvomoykasHelper
+end

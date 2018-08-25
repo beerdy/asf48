@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @hostmap.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hostmap.description %>
+</p>
+
+<%= link_to 'Edit', edit_hostmap_path(@hostmap) %> |
+<%= link_to 'Back', hostmaps_path %>

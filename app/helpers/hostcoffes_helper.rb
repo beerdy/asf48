@@ -1,0 +1,2 @@
+module HostcoffesHelper
+end

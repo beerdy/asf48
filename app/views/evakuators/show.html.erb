@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @evakuator.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @evakuator.description %>
+</p>
+
+<%= link_to 'Edit', edit_evakuator_path(@evakuator) %> |
+<%= link_to 'Back', evakuators_path %>

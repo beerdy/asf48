@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @dozopravka.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dozopravka.description %>
+</p>
+
+<%= link_to 'Edit', edit_dozopravka_path(@dozopravka) %> |
+<%= link_to 'Back', dozopravkas_path %>
