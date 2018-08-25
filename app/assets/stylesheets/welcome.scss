@@ -461,12 +461,16 @@
 		float: left;
 		width: 230px;
 		height: 90%;
+
+		#background-logo, #background-logo img {
+			height: 195px;
+		}
+
 		#background-logo {
 			position: absolute;
-			background-image: url('start-logo.png');
+			//background-image: url('start-logo.png');
 			margin: 2px 0 0 90px;
 			width: 195px;
-			height: 195px;
 		}
 	}
 	#text-logo {

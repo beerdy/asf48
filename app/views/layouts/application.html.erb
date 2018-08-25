@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Автотехцентр СТАРТ - Воронежское шоссе, напротив магазина Ашан</title>
+	<title>Автосервис АВТОСФЕРА - Товарный проезд 23А, город Липецк </title>
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/ico/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/ico/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/assets/ico/apple-icon-72x72.png">
@@ -39,7 +39,7 @@
 <div class="layer_logo">
 	<div id="left-logo"></div>
 	<div id="start-logo">
-		<a href="/"><div id="background-logo"></div></a>
+		<a href="/"><div id="background-logo"><%= image_tag '/assets/start-logo.png' %></div></a>
 	</div>
 	<div id="right-logo"></div>
 	<div id="text-logo">
@@ -74,13 +74,11 @@
 				<% end %>
 			</div>
 		</div>
-		<h1>АВТОТЕХЦЕНТР</h1>
-		<h3>ЛИПЕЦК, ВОРОНЕЖСКОЕ ШОССЕ - напротив магазина Ашан</h3>
+		<h1>АВТОСЕРВИС</h1>
+		<h3>Город Липецк, Товарный проезд 23А</h3>
 		<div id="flag-logo"><%= image_tag('flag-min.png') %></div>
 		<div id="phone-logo">
-			<h1>8(4742)52-22-62</h1>
-			<div style="background-color: green; height: 30px; border-radius: 20px; text-align: center; padding: 5px 0 0 0; margin: -7px 0 0 0"><a href="http://csct.startlp.com" style='color:white'><span style="text-transform: uppercase;">Обслуживание SsangYong</span></a></div>
-			<div style="background-color: red; height: 30px; border-radius: 20px; margin:2px 0 0 0; text-align: center;padding: 5px 0 0 0"><a href="http://wm.startlp.com" style='color:white'><span>МОЙКА АВТОМОБИЛЕЙ</span></a></div>
+			<h1>8 910 252 29 36</h1>
 		</div>
 	</div>
 </div>
@@ -102,21 +100,21 @@
 				<div class="sm_submenu">
 					<div>
 						<p>СИЛОВЫЕ АГРЕГАТЫ</p>
-						<a href="/kapitalremonts"><span><strong>»</strong>  Ремонт двигателя </span></a>
-						<a href="/obsluzhivanies"><span><strong>»</strong> Техническое обслуживание</span></a>
-						<a href="/zamenamaslos"><span><strong>»</strong> Замена масел и фильтров</span></a>
+						<a href="/kapitalremonts"><span><strong>»</strong>  Двигатель </span></a>
+						<a href="/obsluzhivanies"><span><strong>»</strong> Выхлопная система</span></a>
+						<a href="/zamenamaslos"><span><strong>»</strong> Трансмиссия</span></a>
 					</div>
 					<div>
 						<p>НАИБОЛЕЕ ВОСТРЕБОВАННО</p>
 						<a href="/monitorings"><span><strong>»</strong> Электрооборудование/span></a>
-						<a href="/kachestvomoykas"><span><strong>»</strong> Качественная автомойка</span></a>
+						<a href="/kachestvomoykas"><span><strong>»</strong> Диагностика и ремонт подвески</span></a>
 						<a href="/shinniyservices"><span><strong>»</strong> Шинный сервис</span></a>
 					</div>
 					<div>
 						<p>ПРОЧИЕ УСЛУГИ</p>
 						<a href="/dozopravkas"><span><strong>»</strong> Заправка кондиционеров</span></a>
 						<a href="/luboyrodremonta"><span><strong>»</strong> Развал - схождение</span></a>
-						<a href="/evakuators"><span><strong>»</strong> Кузовной ремонт</span></a>
+						<a href="/evakuators"><span><strong>»</strong> ЭВАКУАТОР</span></a>
 					</div>
 				</div>
 			</div>
@@ -157,9 +155,9 @@
 				<div class="sm_submenu">
 					<div>
 						<p>КОРОТКО О СЕРВИСЕ</p>
-						<a href="/certpodveskas#specs"><span><strong>»</strong> Специалисты</span></a>
+						<!-- <a href="/certpodveskas#specs"><span><strong>»</strong> Специалисты</span></a> -->
 						<a href="#name2"><span><strong>»</strong> Сертификаты</span></a>
-						<a href="/hostcoffes"><span><strong>»</strong> Зона ожидания</span></a>
+						<!-- <a href="/hostcoffes"><span><strong>»</strong> Зона ожидания</span></a> -->
 						<a href="/photobooks"><span><strong>»</strong> Фотогалерея</span></a>
 					</div>
 					<div>
@@ -184,18 +182,18 @@
 	<div class='block2'>
 		<div class='servicebutton'>
 			<div>
-				<a href="/zamenamaslos" onclick="welcome.pressUslugi(this)"><div></div><div><span>ЗАМЕНА МАСЕЛ И ФИЛЬТРОВ<br>(технических жидкостей)</span></div></a>
+				<a href="/zamenamaslos" onclick="welcome.pressUslugi(this)"><div></div><div><span>ТРАНСМИССИЯ<br>(ремонт и обслуживание)</span></div></a>
 			</div>
 			<div>
-				<a href="/kapitalremonts" onclick="welcome.pressUslugi(this)"><div></div><div><span>РЕМОНТ ДВИГАТЕЛЯ<br>(систем охлаждения)</span></div></a>
+				<a href="/kapitalremonts" onclick="welcome.pressUslugi(this)"><div></div><div><span>ДВИГАТЕЛЬ<br>(систем охлаждения)</span></div></a>
 			</div>
 			<div>
-				<a href="/obsluzhivanies" onclick="welcome.pressUslugi(this)"><div></div><div><span>ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ<br>(регулярное ТО систем автомобиля)</span></div></a>
+				<a href="/obsluzhivanies" onclick="welcome.pressUslugi(this)"><div></div><div><span>ВЫХЛОПНАЯ СИСТЕМА<br>(регулярное ТО систем автомобиля)</span></div></a>
 			</div>
 		</div>
 		<div class='servicebutton'>
 			<div >
-				<a href="/kachestvomoykas" onclick="welcome.pressUslugi(this)"><div></div><div><span>КАЧЕСТВЕННАЯ АВТОМОЙКА</span></div></a>
+				<a href="/kachestvomoykas" onclick="welcome.pressUslugi(this)"><div></div><div><span>ДИАГНОСТИКА И РЕМОНТ ПОДВЕСКИ</span></div></a>
 			</div>
 			<div>
 				<a href="/shinniyservices" onclick="welcome.pressUslugi(this)"><div></div><div><span>ШИННЫЙ СЕРВИС</span></div></a>
@@ -212,7 +210,7 @@
 				<a href="/dozopravkas" onclick="welcome.pressUslugi(this)"><div></div><div><span>ЗАПРАВКА КОНДИЦИОНЕРОВ (обслуживание, ремонт)</span></div></a>
 			</div>
 			<div>
-				<a href="/evakuators" onclick="welcome.pressUslugi(this)"><div></div><div><span>КУЗОВНОЙ РЕМОНТ</span></div></a>	
+				<a href="/evakuators" onclick="welcome.pressUslugi(this)"><div></div><div><span>ЭВАКУАТОР</span></div></a>	
 			</div>
 		</div>
 	</div>
@@ -232,7 +230,7 @@
 	<div class='block2'>
 		<div class='specbutton'>
 			<div></div>
-			<a href="/certkapitals" onclick="welcome.pressUslugi(this)"><span>КАПИТАЛЬНЫЙ ДВИГАТЕЛЯ</span></a>
+			<a href="/certkapitals" onclick="welcome.pressUslugi(this)"><span>ДВИГАТЕЛЬ МАШИНЫ</span></a>
 		</div>
 		<div class='specbutton'>
 			<div></div>
@@ -290,7 +288,7 @@
 	</div>
 </div>
 <div class="layer11">
-	<div class="copyright">© 2015 СТАРТ Сервисный центр | <span><a href="">Лицензионное соглашение & разрешение обработки Cookie</a></span></div>
+	<div class="copyright">© 2015 Автосфера Сервисный центр | <span><a href="">Лицензионное соглашение & разрешение обработки Cookie</a></span></div>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -345,17 +343,17 @@
 <div class="layer12"></div>
 <script type="text/javascript">
 	menuValues = new Object(12);
-	menuValues['zamenamaslos']    = 'ЗАМЕНА МАСЕЛ И ФИЛЬТРОВ';
-	menuValues['kapitalremonts']  = 'РЕМОНТ ДВИГАТЕЛЯ';
-	menuValues['obsluzhivanies']  = 'ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ';
-	menuValues['kachestvomoykas'] = 'КАЧЕСТВЕННАЯ АВТОМОЙКА';
+	menuValues['zamenamaslos']    = 'ТРАНСМИССИЯ';
+	menuValues['kapitalremonts']  = 'ДВИГАТЕЛЬ';
+	menuValues['obsluzhivanies']  = 'ВЫХЛОПНАЯ СИСТЕМА';
+	menuValues['kachestvomoykas'] = 'ДИАГНОСТИКА И РЕМОНТ ПОДВЕСКИ';
 	menuValues['shinniyservices'] = 'ШИННЫЙ СЕРВИС';
 	menuValues['monitorings']     = 'ЭЛЕКТОРОБОРУДОВАНИЕ';
 	menuValues['luboyrodremonta'] = 'РАЗВАЛ СХОЖДЕНИЕ';
 	menuValues['dozopravkas']     = 'КОНДИЦИОНЕРЫ';
-	menuValues['evakuators']      = 'КУЗОВНОЙ РЕМОНТ';
+	menuValues['evakuators']      = 'ЭВАКУАТОР';
 
-	menuValues['certkapitals']   = 'РЕМОНТ ДВИГАТЕЛЯ';
+	menuValues['certkapitals']   = 'ДВИГАТЕЛЬ МАШИНЫ';
 	menuValues['certpodveskas']  = 'РЕМОНТ ПОДВЕСКИ';
 	menuValues['certelectros']   = 'РЕМОНТ ЭЛЕКТОРОБОРУДОВАНИЯ';
 	menuValues['certobsluzhis']  = 'ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ';

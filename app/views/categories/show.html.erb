@@ -1,4 +1,8 @@
-<br>
+<h3>ЗАПЧАСТИ</h3>
+<%= image_tag('/assets/catalog.png')%>
+<h3>ШИНЫ</h3>
+<%= image_tag('/assets/shiny.jpg')%>
+<br><br>
 <p><strong>КАТАЛОГ</strong> - <u><%= @category.title %></u></p>
 <div class="content-product-block-out">
 <% @category.products.each do |product| %>
